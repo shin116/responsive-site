@@ -14,9 +14,14 @@ header{
 }
 }
 
+@media(max-width: 768px){
+ .topimag{height: 250px;
+    }
+}
 
 .main{
     text-align:center;
+    margin:20px;
 }
 
 .main-text{
@@ -27,14 +32,14 @@ header{
 .mainbox{
         display: flex;
      @include flex-direction(row);    
-      justify-content: space-between;
+       @include display-flex;
+    justify-content: space-between;
        text-align:center;
 }
 
 .box{
-    padding: 30px;
     width: 30%;
-    
+    text-align: center;
  }
 
 .box h2{
@@ -52,16 +57,18 @@ header{
 @media(max-width: 768px){
 .main{
        text-align:center;
-    width:100%;
+    width: 90%;
 }
 .mainbox{
-    width:100%;
-    @include flex-direction(column); 
+    width: 100%;
+     @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    text-align: center;
  }
  .box{
-     margin:10px;
      width: 100%;
-     text-align:center;
+     margin:10px;
  }
 }
 
